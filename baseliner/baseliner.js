@@ -77,7 +77,8 @@ var Baseliner = function(options) {
     this.overlay.id = this.overlay_id;
     document.body.appendChild(this.overlay);
     this.overlay.style.background =  'url(http://baselinebg.keyes.ie/?h=' + this.opts.gridHeight + '&r=' + this.opts.gridColor[0] + '&g=' + this.opts.gridColor[1] + '&b=' + this.opts.gridColor[2] + '&s=' + this.opts.gridSpace + ') repeat';
-    this.overlay.style.position = 'absolute';
+    this.overlay.style.position = 'fixed';
+    this.overlay.style.pointerEvents = 'none';
     this.overlay.style.top = this.opts.gridOffset + 'px';
     this.overlay.style.left = '0px';
     this.overlay.style.zIndex = 9998;
